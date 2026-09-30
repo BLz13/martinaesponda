@@ -16,7 +16,7 @@ import { useUIState } from '../../hooks/context/useUIState';
 
 export default function MainContent() {
 
-  const { theme, lang, magic, sidebarState, scrollToSection } = useUIState();
+  const { theme, lang, sidebarState, scrollToSection } = useUIState();
   
   const [displayLang, setDisplayLang] = useState(lang);
   const [hide, setHide] = useState(false);
@@ -99,12 +99,10 @@ export default function MainContent() {
     
   }) ?? [];
 
-  return (!magic ? (
-    <RawContent />
-  ) : (
+  return (
     <main key={displayLang} className={`cvData ${stateClass} ${hide ? "hide" : "show"}`} onAnimationEnd={handleAnimationEnd} >
       {sections}
     </main>
-  ));
+  );
 
 }

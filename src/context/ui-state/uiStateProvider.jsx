@@ -82,26 +82,7 @@ export default function UIStateProvider({ children }) {
 
   const [sidebarState, setSidebarState] = useState(false);
 
-  // lazy initializer — runs once, reads localStorage before first paint
-  const [magic, setMagic] = useState(() => {
-    try {
-      return localStorage.getItem(MAGIC_STORAGE_KEY) === "true";
-    } catch {
-      // localStorage can throw in some environments (private browsing, SSR, etc.)
-      return false;
-    }
-  });
-
   const [lang, setLang] = useState('es');
-
-  const magicOn = useCallback(() => {
-    setMagic(true);
-    try {
-      localStorage.setItem(MAGIC_STORAGE_KEY, "true");
-    } catch {
-      // fails silently if storage is unavailable — magic still works for this session
-    }
-  }, []);
 
   const toggleLang = useCallback(() => {
     setLang(prev => (prev === 'es' ? 'en' : 'es'));
@@ -137,8 +118,6 @@ export default function UIStateProvider({ children }) {
     toggleTheme,
     lang,
     toggleLang,
-    magic,
-    magicOn,
     sidebarState,
     openSidebar,
     closeSidebar,
@@ -149,8 +128,6 @@ export default function UIStateProvider({ children }) {
     toggleTheme,
     lang,
     toggleLang,
-    magic,
-    magicOn,
     sidebarState,
     openSidebar,
     closeSidebar,
