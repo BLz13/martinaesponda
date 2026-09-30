@@ -10,7 +10,6 @@ import Experience from './experience.jsx';
 import MainLogoDark from "../../assets/svg/logo-slim-dark.svg?react"
 import MainLogoLight from "../../assets/svg/logo-slim-light.svg?react"
 import Projects from './projects.jsx';
-import RawContent from './rawContent.jsx';
 import Skills from './skills.jsx';
 import { useUIState } from '../../hooks/context/useUIState';
 
