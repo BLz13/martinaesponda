@@ -51,7 +51,7 @@
             transition: all 300ms;
             font-size: 2rem;
             font-family: $font-sans;
-            color: var(--main);
+            color: var(--alt);
             cursor: pointer;
 
             &.separator {
@@ -65,7 +65,7 @@
                 svg {
                     height: 100%;
                     width: 100%;
-                    fill: var(--main);
+                    fill: var(--alt);
                 }
 
                 circle {

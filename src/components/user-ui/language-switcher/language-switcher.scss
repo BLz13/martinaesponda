@@ -21,7 +21,7 @@ $border-size: 2px;
     overflow: hidden;
     cursor: pointer;
 
-    border: var(--main) $border-size solid;
+    border: var(--alt) $border-size solid;
 
     &:hover {
         aspect-ratio: 1 / 2;
@@ -57,7 +57,7 @@ $border-size: 2px;
         aspect-ratio: 1;
         z-index: 4;
         pointer-events: none;
-        border: var(--main) 2px solid;
+        border: var(--alt) 2px solid;
         position: absolute;
         box-sizing: border-box;
         left: calc( -1 * $border-size * 2 );
@@ -81,7 +81,7 @@ $border-size: 2px;
         font-size: 16px;
         text-transform: uppercase;
         font-weight: 500;
-        color: var(--main);
+        color: var(--alt);
         position: absolute;
         left: calc( -1 * $border-size * 2 );
         bottom: calc( -1 * $border-size * 2 );
@@ -128,14 +128,14 @@ $border-size: 2px;
         width: 100%;
         height: auto;
         aspect-ratio: 1;
-        border: var(--alt) $border-size solid;
+        border: var(--main) $border-size solid;
 
         &::before {
-            border: var(--alt) $border-size solid;
+            border: var(--main) $border-size solid;
         }
 
         > span {
-            color: var(--alt);
+            color: var(--main);
         }
 
     }

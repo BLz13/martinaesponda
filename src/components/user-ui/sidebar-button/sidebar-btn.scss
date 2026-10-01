@@ -72,7 +72,7 @@ $height: 40px;
 
         * {
             transition: transform 300ms, opacity 300ms, transform-origin 300ms;
-            stroke: var(--main);
+            stroke: var(--alt);
         }
 
         #barTop {
@@ -108,7 +108,7 @@ $height: 40px;
 
         .sidebar-button {
             * {
-                stroke: var(--alt);
+                stroke: var(--main);
             }
         }
     }

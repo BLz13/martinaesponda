@@ -44,7 +44,7 @@
         transform: scale(2);
         
         path {
-            fill: var(--main);
+            fill: var(--alt);
         }
     }
 
@@ -73,7 +73,7 @@
 
         svg {
             path {
-                fill: var(--alt);
+                fill: var(--main);
             }
         }
 

@@ -149,20 +149,71 @@ export const TEXT = {
       [ "education", "institution", "place", "title", "duration", "status" ],
       {
         institution : 'universidad nacional de mar del plata',
-        place : 'mar del plata, buenos aires, argentina',
-        title : 'bachelor of architecture',
-        duration : '2017 - 2023',
+        place : 'mar del plata',
+        site : 'argentina',
+        title : 'architecture',
+        timeSince : '2017',
+        timeTo : '2023',
         status : 'graduated with academic honors'
+      },
+      {
+        institution : 'santa cruz challenge ImpaCT.AR 2020 FAUD UNMDP',
+        place : 'mar del plata',
+        site : 'argentina',
+        title : 'pre-professional internship',
+        timeSince : '2022',
+        timeTo : '2023',
+        status : 'Project in charge of Mg. Architect Jose Zingoni, data processing and surveying of territorial issues on different land sites in Santa Cruz province.'
       }
     ],
     es : [
       [ "educación", "institución", "ubicación", "título", "duración", "estado" ],
       {
         institution : 'universidad nacional de mar del plata',
-        place : 'mar del plata, buenos aires, argentina',
-        title : 'licenciada en arquitectura',
-        duration : '2017 - 2023',
-        estado : 'graduada con reconocimiento académico'
+        place : 'mar del plata',
+        site : 'argentina',
+        title : 'arquitectura',
+        timeSince : '2017',
+        timeTo : '2023',
+        status : 'graduada distinguida con reconocimiento por promedio'
+      },
+      {
+        institution : 'santa cruz desafio ImpaCT.AR 2020 FAUD UNMDP',
+        place : 'mar del plata',
+        site : 'argentina',
+        title : 'practica pre-profesional',
+        timeSince : '2022',
+        timeTo : '2023',
+        status : 'Proyecto a cargo de Mg. Arq. Jose Zingoni, procesamiento de datos y relevammiento de problematicas territoriales de localidades de la provincia de Santa Cruz.'
+      },
+      {
+        place : 'Remoto',
+        title : 'Curso de Autocad Autodesk',
+        timeSince : '2016',
+      },
+      {
+        institution : 'Arcux',
+        place : 'Remoto',
+        title : 'Curso Revit Autodesk Arquitectura',
+        timeSince : '2020',
+      },
+      {
+        institution : 'Udemy',
+        place : 'Remoto',
+        title : 'Curso Diseño y Decoracion de Ambientes y Espacios Interiores',
+        timeSince : '2020',
+      },
+      {
+        institution : 'Construsoft',
+        place : 'Remoto',
+        title : 'Curso Tekla Structures Acero Certificado',
+        timeSince : '2023',
+      },
+      {
+        institution : 'Construsoft',
+        place : 'Remoto',
+        title : 'Curso Tekla Structures Hormigón Certificado',
+        timeSince : '2023',
       }
     ],
   },

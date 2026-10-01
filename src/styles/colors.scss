@@ -1,162 +1,22 @@
-
-@use "sass:map";
-
 //BLUE
+$lightBlue:  #53B3CB;
+$darkBlue:  #0B5563;
 
-$lightBlue-50:  #D1DEF0;
-$lightBlue-100: #C1D3EB;
-$lightBlue-200: #B2C9E6;
-$lightBlue-300: #A3BFE1;
-$lightBlue-400: #93B4DC;
-$lightBlue-500: #84A9D7;
-$lightBlue-600: #749FD2;
-$lightBlue-700: #6594CD;
-$lightBlue-800: #5689C8;
-$lightBlue-900: #467EC3;
+// GREY
+$grey:  #897C80;
 
-$darkBlue-50:  #0056E0;
-$darkBlue-100: #004ECC;
-$darkBlue-200: #0046B8;
-$darkBlue-300: #003FA3;
-$darkBlue-400: #00378F;
-$darkBlue-500: #002F7A;
-$darkBlue-600: #002766;
-$darkBlue-700: #001F52;
-$darkBlue-800: #00173D;
-$darkBlue-900: #001029;
+//  BROWN
+$brown:  #1C0F13;
 
+// CREAM
+$cream:  #F3E9DC;
 
-// PURPLE
-
-$purple-50:  #907AD6;
-$purple-100: #8973D4;
-$purple-200: #7C63CF;
-$purple-300: #6F53CA;
-$purple-400: #6244C5;
-$purple-500: #583ABB;
-$purple-600: #5035AC;
-$purple-700: #49309C;
-$purple-800: #422B8C;
-$purple-900: #3B267D;
-
-
-//  PINK
-
-$pink-50:  #FFD8D6;
-$pink-100: #FFC0BE;
-$pink-200: #FFC5C2;
-$pink-300: #FFB1AD;
-$pink-400: #FF9E99;
-$pink-500: #FF8B85;
-$pink-600: #FF7770;
-$pink-700: #FF645C;
-$pink-800: #FF5147;
-$pink-900: #FF3D33;
-
-
-// GREEN
-
-$green-50:  #45CFD9;
-$green-100: #34CBD5;
-$green-200: #26B0BA;
-$green-300: #26B0BA;
-$green-400: #23A0A9;
-$green-500: #1F9098;
-$green-600: #1C8087;
-$green-700: #187177;
-$green-800: #146166;
-$green-900: #115055;
-
-:root,
 [data-theme="light"] {
-    --main: #FFF;
-    --alt: #000;
-
-    --gradient : -60deg, #{$lightBlue-900}, #{$darkBlue-900}, #{$purple-900}, #{$pink-900}, #{$green-900};
+  --main: #F3E9DC;
+  --alt: #0B5563;
 }
 
 [data-theme="dark"] {
-    --main: #000;
-    --alt: #FFF;
-
-    --gradient : 60deg, #{$lightBlue-500}, #{$darkBlue-50}, #{$purple-50}, #{$pink-500}, #{$green-500};
+  --main: #0B5563;
+  --alt: #53B3CB;
 }
-
-/*
-$animated-gradient: linear-gradient(
-    -60deg,
-    $lightBlue-900,
-    $darkBlue-900,
-    $purple-900,
-    $pink-900,
-    $green-900
-);
-*/
-
-$gradient-size: 200vw 200dvh;
-
-$animated-gradient: (
-    background-image: linear-gradient(var(--gradient) ),
-    background-size: 200vw 200dvh,
-    left: -50%,
-    right: -50%,
-    bottom: 0,
-    top: 0
-);
-
-$min-bg-pos: -50vw 0dvh;
-$max-bg-pos: 50vw -100dvh;
-
-@keyframes slide {
-  0% {
-    background-position: $min-bg-pos;
-  }
-
-  100% {
-    background-position: $max-bg-pos;
-  }
-}
-
-/*
-
-@use "sass:map";
-
-
-.animated-background {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-1;
-  width: 99.99vw;
-  height: 99.99dvh;
-  overflow: hidden;
-  opacity: 1;
-  transition: opacity 500ms;
-
-
-  .bg {
-    background-image: map.get($animated-gradient, background-image);
-    background-size: map.get($animated-gradient, background-size);
-    position: map.get($animated-gradient, position);
-    left: map.get($animated-gradient, left);
-    right: map.get($animated-gradient, right);
-    bottom: map.get($animated-gradient, bottom);
-    top: map.get($animated-gradient, top);
-    animation: slide 3s ease-in-out infinite alternate;
-  }
-
-}
-
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-
-
-*/

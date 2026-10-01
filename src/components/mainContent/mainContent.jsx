@@ -7,15 +7,13 @@ import ChevronDown from "../../assets/svg/chevron-down.svg?react"
 import Contact from './contact.jsx';
 import Education from './education.jsx';
 import Experience from './experience.jsx';
-import MainLogoDark from "../../assets/svg/logo-slim-dark.svg?react"
-import MainLogoLight from "../../assets/svg/logo-slim-light.svg?react"
 import Projects from './projects.jsx';
 import Skills from './skills.jsx';
 import { useUIState } from '../../hooks/context/useUIState';
 
 export default function MainContent() {
 
-  const { theme, lang, sidebarState, scrollToSection } = useUIState();
+  const { lang, sidebarState, scrollToSection } = useUIState();
   
   const [displayLang, setDisplayLang] = useState(lang);
   const [hide, setHide] = useState(false);
@@ -40,11 +38,6 @@ export default function MainContent() {
 
       case "start": return (
           <div key={item} id={item}>
-            {theme === "light" ?
-              <MainLogoLight />
-            :
-              <MainLogoDark />
-            }
             <h1 className='name'>{data?.name?.value}</h1>
             <h2 className='title'>{data?.title?.value}</h2>
             <p>{data?.paragraph?.value}</p>

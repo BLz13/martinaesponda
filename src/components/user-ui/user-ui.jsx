@@ -2,7 +2,6 @@ import './user-ui.scss';
 
 import { useEffect, useState } from 'react';
 
-import AnimatedBackground from './animated-bg/animated-bg';
 import LanguageSwitcher from './language-switcher/language-switcher';
 import Menu from './menu/menu-cnt';
 import Sidebar from './sidebar/sidebar';
@@ -66,7 +65,6 @@ export default function UserUI() {
                     </div>
                 </>
             )}
-            <AnimatedBackground />
         </div>
     );
 }

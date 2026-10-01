@@ -38,39 +38,36 @@ export default function Education({ data, sectionName }) {
                         <Fragment key={key}>
                             <li>
                                 <h3>{ed?.title}</h3>
+                                {ed?.institution ? <p>{ed.institution}</p> : null}
+                                {ed?.status ? <p>{ed.status}</p> : null}
 
-                                <>
-                                    {isMobile ? (
-                                        <>
-                                            <p>
-                                                <strong>{ed?.place}</strong>
-                                            </p>
-                                            <p>
-                                                {ed?.site}
-                                            </p>
-                                        </>
-                                    ) : (
+                                {isMobile ? (
+                                    <>
                                         <p>
-                                            <strong>{ed?.place}</strong> - {ed?.site}
+                                            <p><strong>{ed?.place}</strong></p>
+                                            <p>{ed?.site}</p>
                                         </p>
-                                    )}
-                                </>
-
-                                <p>
-                                    {isMobile ? (
-                                        <>
+                                        <p>
                                             <span>{ed?.timeSince}</span>
                                             <ChevronDownIcon />
                                             <span>{ed?.timeTo}</span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            {ed?.timeSince} - {ed?.timeTo}
-                                        </>
-                                    )}
-                                </p>
-
-                                <p>{ed?.status}</p>
+                                        </p>
+                                    </>
+                                ):(
+                                    <>
+                                        {ed?.site ? (
+                                            <p><strong>{ed?.place}</strong> - {ed?.site}</p>
+                                        ) : (
+                                            <p>{ed?.place}</p>
+                                        )}
+                                        {ed?.timeTo ? (
+                                            <p>{ed?.timeSince} - {ed?.timeTo}</p>
+                                        ) : (
+                                            <p>{ed?.timeSince}</p>
+                                        )}
+                                    </>
+                                )}
+                                
                             </li>
 
                             {!isLast && (

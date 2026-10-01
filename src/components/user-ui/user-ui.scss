@@ -15,6 +15,7 @@
         width: 4vw;
         height: calc( -30px + 100dvh - 30px );
         margin: 30px 0;
+        z-index: 5;
     }
 
     .section-left {
@@ -29,6 +30,7 @@
         left: 0;
         width: 4vw;
         margin: 30px 0;
+        z-index: 5;
     }
     
 }
